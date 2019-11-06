@@ -70,7 +70,6 @@ function processLength(list, callback) {
 function processLastItem(stringList, callback) {
     for (let i = 0; i < stringList.length; i++){
 
-      return callback(i-1);
     }
   }
 
