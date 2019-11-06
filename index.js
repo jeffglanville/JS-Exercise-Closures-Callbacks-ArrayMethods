@@ -68,7 +68,10 @@ function processLength(list, callback) {
  * should return 'barbar'.
 */
 function processLastItem(stringList, callback) {
+    for (let i = 0; i < stringList.length; i++){
 
+      return callback(i-1);
+    }
   }
 
 /**
@@ -89,6 +92,7 @@ function processLastItem(stringList, callback) {
  * should return 1000.
 */
 function processSum(numberList, callback) {
+
 }
 
 /**
@@ -110,7 +114,7 @@ function processSum(numberList, callback) {
  * should return 1000.
 */
 function processProduct(num1, num2, callback) {
-
+  return callback(num1 * num2);
 }
 
 /**
@@ -178,10 +182,13 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  let fullNames = [];
+  runners.forEach((runner) => {
+    fullNames.push (`${runner.last_name} ${runner.first_name}`);
+  });
+  return fullNames;
 }
-
 /**
  * ### Challenge `firstNamesAllCaps`
  *
@@ -211,10 +218,13 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, shirt_size) {
+  // const tShirtSize = runners.filter(function(runner){
+  //   console.log(runner);
+  //   return runner.shirt_size === shirt_size;
+  // });
+  // return tShirtSize;
 }
-
 /**
  * ### Challenge `tallyUpDonations`
  *
